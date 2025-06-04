@@ -450,15 +450,19 @@ nav {
     display: flex;
     justify-content: center;
     animation: float 4s ease-in-out infinite;
+    padding: 1rem;
 }
 
 .about-image img {
-    width: 300px;
+    width: 90%;
     height: auto;
     border-radius: 1rem;
-    position: cover;
+    position: relative;
     z-index: 1;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 4px solid transparent; 
+    background: linear-gradient(white, white) padding-box, 
+              linear-gradient(to right, var(--primary), var(--secondary)) border-box;
 }
 
 @keyframes float {
