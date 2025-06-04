@@ -450,7 +450,7 @@ nav {
     display: flex;
     justify-content: center;
     animation: float 4s ease-in-out infinite;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .about-image img {
@@ -460,9 +460,9 @@ nav {
     position: relative;
     z-index: 1;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    border: 4px solid transparent; 
-    background: linear-gradient(white, white) padding-box, 
-              linear-gradient(to right, var(--primary), var(--secondary)) border-box;
+    border: 4px solid; 
+    background: linear-gradient(to right, var(--primary), var(--secondary)) 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 @keyframes float {
@@ -473,11 +473,12 @@ nav {
 .about-image::before {
     content: '';
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100%;
-    height: 100%;
-    border: 4px solid var(--primary);
+    top: 15px;
+    left: 15px;
+    width: calc(90% + 8px);
+    height: calc(100% - 30px);
+    border: 3px solid;
+    border-image: linear-gradient(to right, var(--primary), var(--secondary)) 1;
     border-radius: 1rem;
     z-index: 0;
     animation: pulse-shadow 2s infinite;
